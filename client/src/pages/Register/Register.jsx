@@ -28,7 +28,7 @@ function Register() {
             const {
                 username, email, password,
             } = values;
-            const data = await axios.post(registerRoute, {
+            const { data } = await axios.post(registerRoute, {
                 username, email, password
             });
             if (!data.status) {

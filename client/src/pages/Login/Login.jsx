@@ -26,7 +26,7 @@ function Login() {
             const {
                 username, password,
             } = values;
-            const data = await axios.post(loginRoute, {
+            const { data } = await axios.post(loginRoute, {
                 username, password
             });
             if (!data.status) {
